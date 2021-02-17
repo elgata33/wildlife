@@ -66,9 +66,16 @@ a {
 /* Lists */
 
 .list {
+  color: var(--color-font-light);
+  line-height: 60px;
   list-style: none;
-  padding-left: 0;
   margin: 0;
+  padding-left: 0;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 60px;
 }
 
 /* Icons */
@@ -104,25 +111,79 @@ a {
 }
 
 .icon-container {
-  width: 40px;
-  height: 40px;
-  background: #f7f7f7;
+  align-items: center;
+  background: var(--color-font-light);
   border-radius: 100%;
   display: inline-flex;
+  height: 40px;
   justify-content: center;
-  align-items: center;
+  width: 40px;
 }
 .icon-container--logo {
-  width: 70px;
-  height: 60px;
-  display: inline-flex;
-  justify-content: center;
   align-items: center;
+  display: inline-flex;
+  height: 60px;
+  justify-content: center;
+  width: 70px;
 }
 .icon-container--search {
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  justify-content: center;
   align-items: center;
+  display: inline-flex;
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+}
+
+/* Buttons */
+
+.btn {
+  border-radius: 5px;
+  border: 0;
+  color: var(--color-font-light);
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 23px;
+  line-height: 27px;
+  outline: 0;
+  padding: 0;
+  text-align: center;
+  transition: background .3s, border .3s;
+}
+
+.btn--main {
+  width: 160px;
+  height: 60px;
+  background: var(--color-orange-main);
+}
+
+.btn--search {
+  width: 120px;
+  height: 60px;
+  background: var(--color-orange-main);
+  border-radius: 0px 5px 5px 0px;
+}
+
+.btn--main:hover, .btn--search:hover {
+  background: var(--color-orange-light);
+}
+
+.btn--main:active, .btn--search:active {
+  background: var(--color-orange-dark);
+}
+
+.btn--outline {
+  width: 120px;
+  height: 50px;
+  border: 2px solid var(--color-orange-main);
+  background: transparent;
+}
+
+.btn--outline:hover {
+  background: var(--color-orange-main);
+  border: 2px solid var(--color-orange-main);
+}
+
+.btn--outline:active {
+  background: var(--color-orange-dark);
+  border: 2px solid var(--color-orange-dark);
 }
