@@ -7,6 +7,12 @@
   --color-font-dark: #333333;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Typography */
 
 body {
@@ -49,4 +55,50 @@ h4 {
 p {
   color: var(--color-font-light);
   margin: 0;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+/* Lists */
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Icons */
+
+.icon--facebook {
+  width: 15px;
+  height: 27px;
+}
+
+.icon--instagram {
+  width: 30px;
+  height: 30px;
+}
+
+.icon--pinterest {
+  width: 20px;
+  height: 26px;
+}
+
+.icon--telegram {
+  width: 25px;
+  height: 22px;
+}
+
+.icon-container {
+  height: 40px;
+  width: 40px;
+  background: #f7f7f7;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
