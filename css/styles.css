@@ -19,9 +19,6 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 h1,
@@ -68,21 +65,6 @@ a {
   text-decoration: none;
 }
 
-/* Lists */
-
-.list {
-  color: var(--color-font-light);
-  line-height: 60px;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-.list--inline .list__item {
-  display: inline-block;
-  margin-right: 60px;
-}
-
 /* Icons */
 
 .icon--facebook {
@@ -115,28 +97,39 @@ a {
   height: 23px;
 }
 
-.icon-container {
+.icon--arrow {
+  width: 26px;
+  height: 39px;
+}
+
+.icon-container,
+.icon-container--logo,
+.icon-container--search,
+.icon-container--arrow {
   align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon-container {
   background: var(--color-font-light);
   border-radius: 100%;
-  display: inline-flex;
   height: 40px;
-  justify-content: center;
   width: 40px;
 }
 .icon-container--logo {
-  align-items: center;
-  display: inline-flex;
   height: 60px;
-  justify-content: center;
   width: 70px;
 }
 .icon-container--search {
-  align-items: center;
-  display: inline-flex;
   height: 32px;
-  justify-content: center;
   width: 32px;
+}
+
+.icon-container--arrow {
+  width: 30px;
+  height: 70px;
 }
 
 /* Buttons */
@@ -197,16 +190,12 @@ a {
 
 /* Inputs */
 
-.form {
-
-}
-
 .form__title {
   margin-bottom: 60px;
   text-align: center;
 }
 
-.form__div {
+.form__send {
   width: 540px;
   height: 60px;
   position: relative;
@@ -226,7 +215,7 @@ a {
   line-height: 27px;
   outline: 0;
   padding: 15px;
-  transition: border .2s;
+  transition: border 0.2s;
 }
 
 .form__input:focus {
@@ -243,14 +232,161 @@ a {
   right: 0;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .form {
     margin: 0 20px;
   }
 
-  .form__div {
+  .form__send {
     width: 100%;
   }
+}
+
+/* Grid */
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x3 {
+    grid-template-columns:
+      minmax(150px, 300px)
+      minmax(150px, 300px)
+      minmax(150px, 300px);
+  }
+}
+
+/* Articles */
+
+.articles__container {
+  position: relative;
+  transition: transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.articles__container > img {
+  max-width: 100%;
+}
+
+.articles__container:hover {
+  transform: scale(1.05);
+}
+
+.articles__text {
+  text-align: center;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
+}
+
+.articles__description {
+  line-height: 27px;
+  font-size: 17px;
+}
+
+/* Blocks */
+
+.block--dark {
+  background: #02160b;
+}
+
+.block--grey {
+  background: var(--color-font-grey);
+}
+
+.block--footer {
+  color: #181617;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+.hero {
+  background-image: url(/images/fox.png);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Header*/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 19px;
+  padding-bottom: 120px;
+}
+
+.header__logo {
+  color: var(--color-font-light);
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  line-height: 60px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  margin-right: 15px;
+}
+
+.header__nav--list {
+  list-style: none;
+}
+
+.header__nav--item {
+  display: inline-block;
+  margin-right: 60px;
 
 }
 
+.header__nav--item:last-child {
+  margin-right: 0px;
+}
+
+.header__nav--item--link a {
+  color: var(--color-font-light);
+}
+
+.header__nav--item--link {
+  font-size: 23px;
+  transition: color .3s;
+  line-height: 60px;
+}
+
+.header__nav--item--link:hover{
+  color: var(--color-font-grey);
+}
+
+/* Survival */
+
+.survival {
+  padding-bottom: 240px;
+}
+
+.survival__heading {
+  margin-bottom: 50px;
+}
+
+.survival__description {
+  margin-bottom: 50px;
+  width: 274px;
+  line-height: 27px;
+  font-size: 18px;
+}
