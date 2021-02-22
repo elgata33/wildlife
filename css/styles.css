@@ -203,6 +203,7 @@ a {
   line-height: 27px;
   outline: 0;
   padding: 15px;
+  padding-right: 135px;
   transition: border 0.2s;
 }
 
@@ -447,18 +448,18 @@ a {
 }
 
 .background--fox {
-  background-image: url(/images/fox.png);
+  background-image: url(../images/fox.png);
   background-position: top;
   background-repeat: no-repeat;
 }
 
 .background--footer {
-  background-image: url(/images/leaves.png);
+  background-image: url(../images/leaves.png);
   background-position: bottom;
   background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 1448px) {
+@media screen and (max-width: 1140px) {
   .container {
     padding-left: 20px;
     padding-right: 20px;
@@ -566,7 +567,7 @@ a {
   padding: 150px 0;
 }
 
-@media screen and (max-width: 1076px) {
+@media screen and (max-width: 1140px) {
   .footer {
     padding: 25px 0;
     flex-direction: column;
