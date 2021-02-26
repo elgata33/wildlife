@@ -136,10 +136,11 @@ a {
   padding: 0;
   text-align: center;
   transition: background 0.2s, border 0.2s;
+  display: inline-block;
 }
 
 .btn--main {
-  padding: 16px 43px;
+  padding: 16.5px 43px;
   background: var(--color-orange-main);
 }
 
@@ -340,7 +341,6 @@ a {
 
 .articles__container {
   position: relative;
-  transition: transform 0.2s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -349,10 +349,6 @@ a {
 
 .articles__container > img {
   max-width: 100%;
-}
-
-.articles__container:hover {
-  transform: scale(1.03);
 }
 
 .articles__text {
@@ -472,7 +468,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 19px;
+  padding-top: 20px;
 }
 
 @media screen and (max-width: 768px) {
